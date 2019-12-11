@@ -1,0 +1,61 @@
+{
+    "author": "Leon Hassan",
+    "short_name": "The Man Cave",
+    "name": "The Man Cave",
+    "description": "Leon Hassan's blog about web development.",
+
+    "icons": [
+        {
+            "src": "/assets/PWA_icons/icon_16px.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "/assets/PWA_icons/icon_32px.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/assets/PWA_icons/icon_64px.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "/assets/PWA_icons/icon_96px.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/assets/PWA_icons/icon_128px.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/assets/PWA_icons/icon_160px.png",
+            "type": "image/png",
+            "sizes": "160x160"
+        },
+        {
+            "src": "/assets/PWA_icons/icon_192px.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/PWA_icons/icon_512px.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/?utm_source=homescreen",
+
+    "background_color": "#f8f8f8",
+    "theme_color": "#f05f40",
+
+    "display": "standalone",
+    "manifest_version": 2,
+    "version": "1.0.1",
+
+    "dir": "ltr",
+    "default_locale": "en",
+    "gcm_sender_id": "103953800507"
+}

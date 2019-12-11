@@ -5,6 +5,7 @@ const pump = require('pump');
 const livereload = require('gulp-livereload');
 const postcss = require('gulp-postcss');
 const zip = require('gulp-zip');
+const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const beeper = require('beeper');
@@ -63,6 +64,7 @@ function js(done) {
             'assets/js/*.js'
         ], {sourcemaps: true}),
         concat('casper.js'),
+        babel({ presets: ['@babel/preset-env'] }),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
@@ -71,8 +73,8 @@ function js(done) {
 
 function zipper(done) {
     const targetDir = 'dist/';
-    const themeName = require('./package.json').name;
-    const filename = themeName + '.zip';
+    //const themeName = require('./package.json').name;
+    const filename = 'casper_custom.zip';
 
     pump([
         src([

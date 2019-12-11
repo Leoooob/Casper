@@ -11,6 +11,13 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    {{!-- PWA --}}
+    <meta name="theme-color" content="#f05f40">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="128x128" href="{{asset "PWA_icons/icon_128px.png"}}">
+    <link rel="apple-touch-icon" sizes="192x192" href="{{asset "PWA_icons/icon_192px.png"}}">
+    <link rel="apple-touch-icon" sizes="512x512" href="{{asset "PWA_icons/icon_512px.png"}}">
+
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
@@ -30,9 +37,11 @@
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <nav class="site-footer-nav">
+                    <a href="https://leonhassan.dev/" target="_blank" rel="noopener">Portfolio</a>
                     <a href="{{@site.url}}">Latest Posts</a>
                     {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
                     {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+                    <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener">RSS</a>
                     <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
                 </nav>
             </div>

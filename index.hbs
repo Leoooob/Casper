@@ -9,7 +9,10 @@ into the {body} of the default.hbs template --}}
             <div class="site-header-content">
                 <h1 class="site-title">
                     {{#if @site.logo}}
-                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+                        <picture>
+                            <source srcset="{{asset "header.webp"}}" type="image/webp" alt="{{@site.title}}">
+                            <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
+                        </picture>
                     {{else}}
                         {{@site.title}}
                     {{/if}}
